@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import fs from 'fs-extra';
-import path from 'path';
+const fs = require('fs-extra');
+const path = require('path');
 
 function main() {
   const rootName = process.argv[2];
@@ -9,7 +9,7 @@ function main() {
   console.log('creating template');
 
   fs.copySync(
-    path.join(path.dirname, 'template'),
+    path.join(__dirname, 'template'),
     path.join(process.cwd(), rootName),
   );
 }

@@ -1,6 +1,5 @@
 {
   "name": "create-miniserver",
-  "type": "module",
   "version": "1.0.4",
   "description": "",
   "main": "index.js",
