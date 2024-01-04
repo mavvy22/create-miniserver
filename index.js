@@ -6,12 +6,22 @@ const path = require('path');
 function main() {
   const rootName = process.argv[2];
 
-  console.log('creating template');
+  const mainDir = path.join(process.cwd(), rootName);
 
-  fs.copySync(
-    path.join(__dirname, 'template'),
-    path.join(process.cwd(), rootName),
-  );
+  console.log('Creating template');
+
+  fs.copySync(path.join(__dirname, 'template'), mainDir);
+
+  const packageJsonPath = path.join(mainDir, 'package.json');
+  const packageJson = fse.readJsonSync(packageJsonPath);
+
+  packageJson.name = rootName;
+
+  fse.writeJSONSync(packageJsonPath, packageJson, { spaces: 2 });
+
+  console.log('Done');
+  console.log(`cd ${rootName}`);
+  console.log('RUN npm install');
 }
 
 main();
