@@ -13,11 +13,11 @@ function main() {
   fs.copySync(path.join(__dirname, 'template'), mainDir);
 
   const packageJsonPath = path.join(mainDir, 'package.json');
-  const packageJson = fse.readJsonSync(packageJsonPath);
+  const packageJson = fs.readJsonSync(packageJsonPath);
 
   packageJson.name = rootName;
 
-  fse.writeJSONSync(packageJsonPath, packageJson, { spaces: 2 });
+  fe.writeJSONSync(packageJsonPath, packageJson, { spaces: 2 });
 
   console.log('Done');
   console.log(`cd ${rootName}`);
