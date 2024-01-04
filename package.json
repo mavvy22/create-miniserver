@@ -1,0 +1,18 @@
+{
+  "name": "create-miniserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0"
+  },
+  "keywords": [],
+  "bin": {
+    "create-miniserver": "index.js"
+  },
+  "author": "Marc Jeric Espiritu<mavvystudio@gmail.com>",
+  "license": "MIT"
+}
