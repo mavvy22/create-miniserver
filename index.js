@@ -8,7 +8,10 @@ function main() {
 
   console.log('creating template');
 
-  fs.copySync('template', path.join(process.cwd(), rootName));
+  fs.copySync(
+    path.join(path.dirname, 'template'),
+    path.join(process.cwd(), rootName),
+  );
 }
 
 main();
