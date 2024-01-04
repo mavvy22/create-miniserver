@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 
 import fs from 'fs-extra';
+import path from 'path';
 
 function main() {
-  const argv = process.argv;
-  console.log(argv);
+  const rootName = process.argv[2];
+
   console.log('creating template');
 
-  fs.copySync('./template', process.cwd());
+  fs.copySync('template', path.join(process.cwd(), rootName));
 }
 
 main();
