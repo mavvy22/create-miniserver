@@ -17,7 +17,7 @@ function main() {
 
   packageJson.name = rootName;
 
-  fe.writeJSONSync(packageJsonPath, packageJson, { spaces: 2 });
+  fs.writeJSONSync(packageJsonPath, packageJson, { spaces: 2 });
 
   console.log('Done');
   console.log(`cd ${rootName}`);
