@@ -8,7 +8,7 @@ function main() {
 
   const mainDir = path.join(process.cwd(), rootName);
 
-  console.log('Creating template');
+  console.log('Creating template...');
 
   fs.copySync(path.join(__dirname, 'template'), mainDir);
 
@@ -20,7 +20,8 @@ function main() {
   fs.writeJSONSync(packageJsonPath, packageJson, { spaces: 2 });
 
   console.log('Done');
-  console.log(`cd ${rootName}`);
+  console.log(`
+cd ${rootName}`);
   console.log('RUN npm install');
 }
 
