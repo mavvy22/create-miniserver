@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@mavvy/miniserver": "^1.4.1",
+    "@mavvy/miniserver": "^1.9.0",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.2"
   }
 }
